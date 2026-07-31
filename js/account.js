@@ -1,7 +1,7 @@
 const accountBtn = document.getElementById("account-btn");
 const accountMenu = document.getElementById("account-menu");
 const logoutBtn = document.getElementById("logout-btn");
-
+console.log(logoutBtn);
 
 accountBtn.addEventListener("click", function(event){
 
@@ -23,7 +23,7 @@ accountBtn.addEventListener("click", function(event){
 
 
 logoutBtn.addEventListener("click", function(){
-
+  console.log("Hice click en Logout");
     localStorage.removeItem("username");
     localStorage.removeItem("password");
 
