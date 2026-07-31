@@ -1,0 +1,757 @@
+/* ================================================= */
+/*                   GENERAL CONFIG                  */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to right, #10051f, #3d0032, #7a2058);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* ================================================= */
+/*                END GENERAL CONFIG                 */
+/* ================================================= */
+
+/* ---------- FAVORITE FILMS BACKGROUND ---------- */
+
+.page-background {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.page-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/favorite-background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.2;
+    z-index: 0;
+}
+
+
+.page-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ----------FAVORITE FILMS BACKGROUND ---------- */
+
+/* ================================================= */
+/*                      HEADER                       */
+/* ================================================= */
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+}
+
+/* -------------------- LOGO -------------------- */
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+
+.logo img {
+    width: 220px;
+    height: auto;
+}
+/* -------------------- LOGO -------------------- */
+
+/* ------------------- NAVBAR ------------------- */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px 20px;
+
+    background-color: rgba(20, 0, 31, 0.8);
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+}
+
+.navbar a {
+    padding: 12px 20px;
+
+    color: white;
+    text-decoration: none;
+
+    background-color: #680054;
+    border-radius: 25px;
+
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.15);
+
+    background-color: #d13b8c;
+    box-shadow: 0 0 15px #d13b8c;
+}
+/* ------------------- NAVBAR ------------------- */
+
+/* ---------------- ACCOUNT BUTTON --------------- */
+
+.account-button {
+    position: absolute;
+    top: 65%;
+    right: 35px;
+
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+
+.account-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+
+    background-color: rgba(20, 0, 31, 0.8);
+    border-radius: 25px;
+
+    transition: 0.3s ease;
+}
+
+
+.account-button a:hover {
+    transform: scale(1.08);
+
+    background-color: #d13b8c;
+    box-shadow: 0 0 15px #d13b8c;
+}
+
+
+/* ---------- ACCOUNT MENU ---------- */
+
+.account-menu {
+
+    display: none;
+
+    position: absolute;
+
+    top: 55px;
+
+    right: 0;
+
+}
+
+
+.account-menu button {
+
+    padding: 12px 20px;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: rgba(20, 0, 31, 0.8);
+
+    border: none;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+}
+
+
+.account-menu button:hover {
+
+    background-color: #d13b8c;
+
+    box-shadow: 0 0 15px #d13b8c;
+
+}
+
+/* ---------- ACCOUNT MENU ---------- */
+
+/* ================================================= */
+/*                    END HEADER                     */
+/* ================================================= */
+
+/* ================================================= */
+/*                 INTRODUCTION PAGE                 */
+/* ================================================= */
+
+.intro {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-title {
+
+    text-align: center;
+
+    font-size: 70px;
+
+    font-weight: 900;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(135deg, #ffffff, #d13b8c);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 25px 35px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #f0f0f0;
+
+    background: rgba(20, 0, 31, 0.5);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(10px);
+}
+
+.button-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 60px;
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 40px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #5a1846, #3b1b6d);
+
+    box-shadow: 0 0 15px rgba(90,24,70,0.5);
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+
+    background: linear-gradient(135deg, #7a2058, #5b2a86);
+
+    transform: scale(1.06);
+
+    box-shadow: 0 0 25px rgba(122,32,88,0.7);
+}
+
+/* ================================================= */
+/*               END INTRODUCTION PAGE               */
+/* ================================================= */
+
+/* ================================================= */
+/*               FAVORITE FILMS PAGE                 */
+/* ================================================= */
+
+/* ---------- FAVORITE FILMS TITLES ---------- */
+
+.favorite-section {
+    margin-top: 90px;
+}
+
+.favorite-title {
+    text-align: center;
+
+    font-size: 60px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 1px;
+
+    background: linear-gradient(135deg, #ffffff, #d13b8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.favorite-subtitle {
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    color: rgba(255,255,255,0.75);
+
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+/* ---------- FAVORITE FILMS TITLES ---------- */
+/* ---------- MOVIE SEARCH INSIDE CARD ---------- */
+
+.movie-input {
+
+    width: 170px;
+
+    padding: 12px 15px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    outline: none;
+
+    background: rgba(20,0,31,0.8);
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+
+.movie-input::placeholder {
+
+    color: rgba(255,255,255,0.6);
+
+}
+
+
+.search-button {
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #5a1846, #3b1b6d);
+
+    transition: 0.3s ease;
+
+}
+
+
+.search-button:hover {
+
+    transform: scale(1.05);
+
+    background: linear-gradient(135deg, #7a2058, #5b2a86);
+
+}
+
+
+/* ---------- MOVIE SEARCH INSIDE CARD ---------- */
+
+/* ---------- CARDS ---------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+    padding: 20px;
+}
+
+
+.card {
+    background: rgba(20, 0, 31, 0.7);
+
+    border: 2px solid rgba(255,255,255,0.1);
+
+    width: 230px;
+    height: 320px;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    transition: 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: #d13b8c;
+
+    box-shadow: 0 0 20px rgba(209,59,140,0.5);
+}
+
+
+.card p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.add-movie {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: linear-gradient(135deg, #5a1846, #3b1b6d);
+
+    color: white;
+
+    font-size: 50px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.add-movie:hover {
+
+    transform: scale(1.1);
+
+    background: linear-gradient(135deg, #7a2058, #5b2a86);
+
+}
+
+.suggestions {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.suggestion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+
+    padding: 8px;
+
+    border-radius: 12px;
+
+
+    background: rgba(20,0,31,0.9);
+
+    color: white;
+
+    font-size: 14px;
+
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.suggestion:hover {
+
+    background: #7a2058;
+
+    transform: scale(1.03);
+
+}
+
+
+.suggestion img {
+
+    width: 35px;
+
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+}
+
+
+
+/* ---------- CARDS ---------- */
+
+/* ================================================= */
+/*               END FAVORITE FILMS PAGE             */
+/* ================================================= */
+
+/* ==================================================/*
+/*               LOGIN & REGISTER PAGE               /*
+/*  =================================================/*
+
+
+/* ---------- LOGIN / REGISTER ---------- */
+
+
+.login-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.login-card {
+
+    width: 380px;
+
+    padding: 40px;
+
+    background: rgba(20,0,31,0.8);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 0 30px rgba(122,32,88,0.5);
+
+}
+
+
+
+.login-card h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.login-card p {
+
+    color: #ddd;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.login-card input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+
+    border-radius: 25px;
+
+    border: none;
+
+    outline: none;
+
+
+    background-color: #2b123d;
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+
+
+.login-card button {
+
+    width: 100%;
+
+    padding: 15px;
+
+
+    border-radius: 25px;
+
+    border: none;
+
+
+    background: linear-gradient(135deg,#5a1846,#3b1b6d);
+
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+.login-card button:hover {
+
+    transform:scale(1.05);
+
+    background:linear-gradient(135deg,#7a2058,#5b2a86);
+
+}
+
+
+
+.login-card span {
+
+    display:block;
+
+    margin-top:25px;
+
+}
+
+
+
+.login-card a {
+
+    color:#d13b8c;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.login-card a:hover {
+
+    color:#ff6ea9;
+
+}
+
+
+/* ---------- LOGIN ---------- */
+
+/* ---------- BACK BUTTON ---------- */
+
+.back-button {
+    position: absolute;
+
+    top: 30px;
+    left: 35px;
+}
+
+
+.back-button a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+}
+
+
+.back-button a:hover {
+
+    color: #d13b8c;
+
+    transform: scale(1.2);
+
+}
+
+
+/* ---------- BACK BUTTON ---------- */
+
+/* ==================================================/*
+/*               END LOGIN & REGISTER PAGE           /*
+/*  =================================================/*
