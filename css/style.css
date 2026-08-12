@@ -24,35 +24,6 @@ body {
 /*                END GENERAL CONFIG                 */
 /* ================================================= */
 
-/* ---------- FAVORITE FILMS BACKGROUND ---------- */
-
-.page-background {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-
-.page-background::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-image: url("images/favorite-background.jpg");
-    background-size: cover;
-    background-position: center;
-
-    opacity: 0.2;
-    z-index: 0;
-}
-
-
-.page-background > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* ----------FAVORITE FILMS BACKGROUND ---------- */
 
 /* ================================================= */
 /*                      HEADER                       */
@@ -155,52 +126,47 @@ body {
     box-shadow: 0 0 15px #d13b8c;
 }
 
+/* ---------------- ACCOUNT BUTTON --------------- */
 
-/* ---------- ACCOUNT MENU ---------- */
+/* ---------- LOGOUT MENU ---------- */
 
-.account-menu {
+.logout-menu {
 
     display: none;
 
     position: absolute;
 
-    top: 55px;
+    top: 45px;
 
     right: 0;
 
 }
 
 
-.account-menu button {
+.logout-menu a {
+
+    display: block;
 
     padding: 12px 20px;
 
     color: white;
 
-    font-size: 16px;
-    font-weight: bold;
+    text-decoration: none;
 
     background-color: rgba(20, 0, 31, 0.8);
 
-    border: none;
-
     border-radius: 25px;
 
-    cursor: pointer;
-
-    
 }
 
 
-.account-menu button:hover {
+.account-button:hover .logout-menu {
 
-    background-color: #d13b8c;
-
-    box-shadow: 0 0 15px #d13b8c;
+    display: block;
 
 }
 
-/* ---------- ACCOUNT MENU ---------- */
+/* ---------- LOGOUT MENU ---------- */
 
 /* ================================================= */
 /*                    END HEADER                     */
@@ -235,27 +201,16 @@ body {
 }
 
 .intro-text {
-
     max-width: 800px;
-
     margin: 0 auto;
-
     padding: 25px 35px;
-
     text-align: center;
-
     font-size: 20px;
-
     line-height: 1.8;
-
     color: #f0f0f0;
-
     background: rgba(20, 0, 31, 0.5);
-
     border-radius: 20px;
-
     border: 1px solid rgba(255,255,255,0.1);
-
     backdrop-filter: blur(10px);
 }
 
@@ -305,9 +260,40 @@ body {
 /*               END INTRODUCTION PAGE               */
 /* ================================================= */
 
+
 /* ================================================= */
 /*               FAVORITE FILMS PAGE                 */
 /* ================================================= */
+
+/* ---------- FAVORITE FILMS BACKGROUND ---------- */
+
+.favorite-background {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.favorite-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/favorite-background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.2;
+    z-index: 0;
+}
+
+
+.favorite-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ----------FAVORITE FILMS BACKGROUND ---------- */
 
 /* ---------- FAVORITE FILMS TITLES ---------- */
 
@@ -343,100 +329,48 @@ body {
 }
 
 /* ---------- FAVORITE FILMS TITLES ---------- */
-/* ---------- MOVIE SEARCH INSIDE CARD ---------- */
 
-.movie-input {
-
-    width: 170px;
-
-    padding: 12px 15px;
-
-    border-radius: 20px;
-
-    border: 1px solid rgba(255,255,255,0.2);
-
-    outline: none;
-
-    background: rgba(20,0,31,0.8);
-
-    color: white;
-
-    font-size: 14px;
-
-}
-
-
-.movie-input::placeholder {
-
-    color: rgba(255,255,255,0.6);
-
-}
-
-
-.search-button {
-
-    padding: 10px 20px;
-
-    border-radius: 20px;
-
-    border: none;
-
-    cursor: pointer;
-
-    color: white;
-
-    font-weight: bold;
-
-    background: linear-gradient(135deg, #5a1846, #3b1b6d);
-
-    transition: 0.3s ease;
-
-}
-
-
-.search-button:hover {
-
-    transform: scale(1.05);
-
-    background: linear-gradient(135deg, #7a2058, #5b2a86);
-
-}
-
-
-/* ---------- MOVIE SEARCH INSIDE CARD ---------- */
 
 /* ---------- CARDS ---------- */
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 
-    gap: 40px;
-    padding: 20px;
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+
+    gap: 20px;
+
+    width: 90%;
+
+    margin: 40px auto;
+
 }
 
 
 .card {
-    background: rgba(20, 0, 31, 0.7);
 
-    border: 2px solid rgba(255,255,255,0.1);
+    width: 100%;
 
-    width: 230px;
-    height: 320px;
+    height: 300px;
 
-    border-radius: 20px;
+    overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
+    border-radius: 15px;
 
-    justify-content: center;
-    align-items: center;
+}
 
-    gap: 20px;
 
-    transition: 0.3s ease;
+.card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
 }
 
 
@@ -455,105 +389,6 @@ body {
 }
 
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.add-movie {
-
-    width: 90px;
-    height: 90px;
-
-    border-radius: 50%;
-
-    border: none;
-
-    background: linear-gradient(135deg, #5a1846, #3b1b6d);
-
-    color: white;
-
-    font-size: 50px;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-}
-
-
-.add-movie:hover {
-
-    transform: scale(1.1);
-
-    background: linear-gradient(135deg, #7a2058, #5b2a86);
-
-}
-
-.suggestions {
-
-    width: 100%;
-
-    margin-top: 10px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-
-}
-
-
-.suggestion {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-
-    padding: 8px;
-
-    border-radius: 12px;
-
-
-    background: rgba(20,0,31,0.9);
-
-    color: white;
-
-    font-size: 14px;
-
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-
-}
-
-
-.suggestion:hover {
-
-    background: #7a2058;
-
-    transform: scale(1.03);
-
-}
-
-
-.suggestion img {
-
-    width: 35px;
-
-    height: 50px;
-
-    object-fit: cover;
-
-    border-radius: 5px;
-
-}
-
-
 
 /* ---------- CARDS ---------- */
 
@@ -561,9 +396,9 @@ body {
 /*               END FAVORITE FILMS PAGE             */
 /* ================================================= */
 
-/* ==================================================/*
-/*               LOGIN & REGISTER PAGE               /*
-/*  =================================================/*
+/* ================================================= */
+/*               LOGIN & REGISTER PAGE               */
+/* ================================================= */
 
 
 /* ---------- LOGIN / REGISTER ---------- */
@@ -716,16 +551,19 @@ body {
 }
 
 
-/* ---------- LOGIN ---------- */
-
 /* ---------- BACK BUTTON ---------- */
 
+
 .back-button {
+
     position: absolute;
 
     top: 30px;
+
     left: 35px;
+
 }
+
 
 
 .back-button a {
@@ -743,6 +581,7 @@ body {
 }
 
 
+
 .back-button a:hover {
 
     color: #d13b8c;
@@ -752,8 +591,6 @@ body {
 }
 
 
-/* ---------- BACK BUTTON ---------- */
-
-/* ==================================================/*
-/*               END LOGIN & REGISTER PAGE           /*
-/*  =================================================/*
+/* ================================================= */
+/*            END LOGIN & REGISTER PAGE              */
+/* ================================================= */
