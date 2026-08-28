@@ -591,6 +591,34 @@ body {
 }
 
 
+/* ---------- FEEDBACK MESSAGES ---------- */
+
+#feedback:empty {
+    display: none;
+}
+
+#feedback {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+}
+
+#feedback.error {
+    background-color: rgba(230, 57, 70, 0.25);
+    border: 1px solid #e63946;
+    color: #ff6b6b;
+}
+
+#feedback.success {
+    background-color: rgba(42, 157, 143, 0.25);
+    border: 1px solid #2a9d8f;
+    color: #52b788;
+}
+
 /* ================================================= */
 /*            END LOGIN & REGISTER PAGE              */
 /* ================================================= */
